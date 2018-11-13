@@ -16,6 +16,10 @@ $(function(){
 		$(this).addClass('active');
 		
 	});
+	
+	/**
+	 * ajax that checks if the username already exists in database.
+	 */
 	$('input[name="register-username"]').blur(function(){
 		$.ajax({
 			type: "POST",
@@ -34,5 +38,4 @@ $(function(){
 			}
 		});
 	});
-	
 });

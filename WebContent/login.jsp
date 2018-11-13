@@ -15,6 +15,7 @@
 
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<title>DevPlat</title>
 </head>
 <body>
 	<div class='container center-block' style="width: 50%">
@@ -30,7 +31,7 @@
 				</div>
 			</div>
 			<div id='login'>
-				<form role='form' id='login-form' method="post" action="login.jsp">
+				<form role='form' id='login-form' name='login-form' method="post" action="login.jsp">
 					<div class='form-group'>
 						<label>Username</label> <input type='text' class='form-control'
 							required name='login-username' placeholder='Enter username'>
@@ -43,7 +44,7 @@
 							String username = request.getParameter("login-username");
 							String password = request.getParameter("login-password");
 							String newUsername = request.getParameter("register-username");
-							String newPassword = request.getParameter("register-password");
+							String newPassword = request.getParameter("registerPassword");
 							UserDAO userDAO = new UserDAO();
 							if (username != null && password != null) {
 								User user = new User(null, username, password);
@@ -57,8 +58,7 @@
 								else{
 									//incorrect password
 									%>
-						<span id="login-fail" style="color: red">Incorrect username
-							and password.</span>
+						<span id="login-fail" style="color: red">Incorrect username and password.</span>
 						<%
 								}
 							} 
@@ -83,24 +83,23 @@
 				</form>
 			</div>
 			<div id='register' style='display: none'>
-				<form role='form' id='register-form'
-					oninput='register-cpassword.setCustomValidity(register-password.value != register-cpassword.value ? "Password does not match." : "")'
+				<form role='form' id='register-form' name='register-form'
+					oninput='registerCpassword.setCustomValidity(registerPassword.value != registerCpassword.value ? "Password does not match." : "")'
 					method="post" action="login.jsp">
 					<div class='form-group'>
 						<label>Username</label> <input type='text' class='form-control'
 							required name='register-username' placeholder='Enter username'>
-						<span id="name-exist" style="color: red; display: none">Username
-							already exists.</span> <span id="name-ok"
+						<span id="name-exist" style="color: red; display: none">Username already exists.</span> <span id="name-ok"
 							style="color: green; display: none">Username is valid.</span>
 					</div>
 					<div class='form-group'>
 						<label>Password</label> <input type='password'
-							class='form-control' required name='register-password'
+							class='form-control' required name='registerPassword'
 							placeholder='Password'>
 					</div>
 					<div class='form-group'>
 						<label>Confirm Password</label> <input type='password'
-							class='form-control' required name='register-cpassword'
+							class='form-control' required name='registerCpassword'
 							placeholder='Re-enter Password'>
 					</div>
 					<div class='text-center'>

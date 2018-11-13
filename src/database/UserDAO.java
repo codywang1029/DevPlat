@@ -92,4 +92,23 @@ public class UserDAO {
 			return false;
 		}
 	}
+	
+	/**
+	 * delete a user
+	 * @param id
+	 * @return 1 if user is deleted, 0 otherwise.
+	 * @throws SQLException
+	 */
+	public int delete(String name) throws SQLException{
+		Connection conn = connectionHandler.getConn();
+		try {
+			PreparedStatement stmt = conn.prepareStatement("DELETE FROM"+TABLE+"WHERE username=\""+name+"\";");
+			int result = stmt.executeUpdate();
+			return result;
+		}
+		catch (SQLException e) {
+			System.out.println(e.getMessage());
+			return 0;
+		}
+	}
 }
