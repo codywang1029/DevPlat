@@ -1,0 +1,21 @@
+.panel{
+    padding:30px;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background:whitesmoke;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+div.heading{
+    font-family: Sans-serif;
+    font-size:20px;
+    margin: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}

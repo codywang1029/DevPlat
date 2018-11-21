@@ -95,7 +95,7 @@ public class UserDAO {
 	
 	/**
 	 * delete a user
-	 * @param id
+	 * @param name
 	 * @return 1 if user is deleted, 0 otherwise.
 	 * @throws SQLException
 	 */
@@ -109,6 +109,27 @@ public class UserDAO {
 		catch (SQLException e) {
 			System.out.println(e.getMessage());
 			return 0;
+		}
+	}
+
+	public Long getId(String name){
+		Connection conn = connectionHandler.getConn();
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT"+COLUMN+"FROM"+TABLE+"WHERE username=\""+name+"\";");
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				User loginUser = userLoader.loadSingle(rs);
+				connectionHandler.closeConn(conn, stmt);
+				return loginUser.getId();
+			}
+			else {
+				connectionHandler.closeConn(conn, stmt);
+				return null;
+			}
+		}
+		catch (SQLException e) {
+			System.out.println(e.getMessage());
+			return null;
 		}
 	}
 }

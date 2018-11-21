@@ -16,10 +16,10 @@ public class DBConn {
 	public Connection getConn() {
 		Connection conn=null;
 		try
-		{  
+		{
 			Class.forName("com.mysql.jdbc.Driver");  
 			conn=DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/devplat","root","");  
+			"jdbc:mysql://localhost:3306/devplat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","");
 			System.out.println("Successfully connected to database.");
 		}
 		catch(Exception e)

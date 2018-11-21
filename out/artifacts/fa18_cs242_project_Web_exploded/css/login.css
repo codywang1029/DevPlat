@@ -1,0 +1,49 @@
+body{
+	padding-top:80px;
+}
+.login-panel{
+	padding:30px;
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 8px;
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+.heading{
+	text-align:center;
+	color:#ccc;
+	font-size:18px;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+
+.login-panel>.heading a{
+	cursor:pointer;
+}
+
+.login-panel>.heading a.active{
+	color:#009688;
+}
+
+#login-submit{
+	width:120px;
+	margin-top:20px;
+	background-color:#009688;
+	color:white;
+}
+
+#login-submit:hover{
+	background-color:#5FB878;
+}
+
+#register-submit{
+	width:120px;
+	margin-top:20px;
+	background-color:#009688;
+	color:white;
+}
+
+#register-submit:hover{
+	background-color:#5FB878;
+}

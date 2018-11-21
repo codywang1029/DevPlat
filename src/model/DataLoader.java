@@ -22,4 +22,5 @@ public interface DataLoader<T> {
 	 * @throws SQLException
 	 */
 	public List<T> loadList(ResultSet rs) throws SQLException;
+	
 }

@@ -3,6 +3,7 @@ package test;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
+import junit.framework.Assert;
 import org.junit.*;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -15,6 +16,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPasswordInput;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 
 import database.UserDAO;
+import org.junit.jupiter.api.Test;
 
 public class testRegister {
 

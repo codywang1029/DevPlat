@@ -1,6 +1,6 @@
 package test;
 
-import org.junit.*;
+import junit.framework.Assert;
 
 
 import com.gargoylesoftware.htmlunit.WebClient;
@@ -10,6 +10,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlForm;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlPasswordInput;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
+import org.junit.jupiter.api.Test;
 
 public class testLogin{
 	
