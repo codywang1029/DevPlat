@@ -10,7 +10,7 @@
 
 div.heading{
     font-family: Sans-serif;
-    font-size:20px;
+    font-size:24px;
     margin: 20px;
 }
 
@@ -19,3 +19,55 @@ hr {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
+.req-item{
+    width:150px;
+    height:180px;
+    margin-top:10px;
+    margin-left:40px;
+    margin-right:20px;
+    border-radius:8px;
+    float:left;
+    text-align: center;
+}
+
+.req-item:hover{
+    background-color: #eeeeee;
+    min-width:150px;
+    min-height:180px;
+    transition: background-color 1s;
+}
+
+.req-icon{
+    font-size: 75px;
+}
+
+.req-name{
+    font-family: Sans-serif;
+    font-size:14px;
+    text-align: center;
+}
+
+.req-button{
+    width: 25px;
+    height:25px;
+    border-radius: 4px;
+    margin-left:18px;
+    margin-right: 10px;
+    vertical-align: center;
+    display: inline-block;
+    text-align: center;
+}
+
+.req-button:hover{
+    background-color: #cccccc;
+    transition: background-color 0.5s;
+}
+
+.req-toolbar{
+    margin-top: 10px;
+    float: bottom;
+    width: 140px;
+    display: none;
+}
+

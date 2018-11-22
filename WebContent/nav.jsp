@@ -15,9 +15,7 @@
                 <a class="nav-link" href="#">Entry 2</a>
             </li>
             <li class="nav-item dropdown" name="dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="Requirement" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:100%;">
-                    Requirement
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="Requirement" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:100%;">Requirement</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="margin-top:8px;display:none;">
                     <a class="dropdown-item" data-toggle="modal" data-target="#create_req">Create a Requirement</a>
                     <a class="dropdown-item" href="viewReq.jsp">My Requirement</a>

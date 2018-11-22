@@ -76,7 +76,7 @@ public class testLogin{
 			pass.type("123456");
 			HtmlButton submit = (HtmlButton)page.getElementById("login-submit");
 			HtmlPage afterSubmit = submit.click();  	
-			Assert.assertTrue(afterSubmit.asXml().contains("hello usernumber1"));	
+			Assert.assertTrue(afterSubmit.asXml().contains("Welcome, usernumber1"));
 		}
 	}
 	

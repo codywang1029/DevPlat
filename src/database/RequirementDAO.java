@@ -22,6 +22,11 @@ public class RequirementDAO {
         requirementLoader = new RequirementLoader();
     }
 
+    /**
+     * general insertion
+     * @param req
+     * @return true for success, false for failure
+     */
     public boolean insertReq(Requirement req) {
         Connection conn = connectionHandler.getConn();
         try {
@@ -44,10 +49,15 @@ public class RequirementDAO {
 
     }
 
-    public boolean deleteReq(Long id) {
+    /**
+     * delete a req based on name
+     * @param name
+     * @return true for success, false for failure
+     */
+    public boolean deleteReq(String name) {
         Connection conn = connectionHandler.getConn();
         try {
-            PreparedStatement stmt = conn.prepareStatement("DELETE FROM" + TABLE + "WHERE id=" + id);
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM" + TABLE + "WHERE name=\"" + name+"\";");
             int result = stmt.executeUpdate();
             return result == 1;
         } catch (SQLException e) {
@@ -56,10 +66,15 @@ public class RequirementDAO {
         }
     }
 
+    /**
+     * update a req based on
+     * @param req
+     * @return
+     */
     public boolean updateReq(Requirement req){
         Connection conn = connectionHandler.getConn();
         try {
-            PreparedStatement stmt = conn.prepareStatement("UPDATE " + TABLE + "SET id=?," +
+            PreparedStatement stmt = conn.prepareStatement("UPDATE " + TABLE + "SET " +
                     "name=?," +
                     "description=?," +
                     "stage=?," +
@@ -68,17 +83,16 @@ public class RequirementDAO {
                     "reviewer_id=?," +
                     "priority=?," +
                     "engineer_deadline=?," +
-                    "reviewer_deadline=?;");
-            stmt.setLong(1, req.getId());
-            stmt.setString(2, req.getName());
-            stmt.setString(3, req.getDescription());
-            stmt.setInt(4, req.getStage());
-            stmt.setLong(5, req.getCreatorId());
-            stmt.setLong(6, req.getEngineerId());
-            stmt.setLong(7, req.getReviewerId());
-            stmt.setInt(8, req.getPriority());
-            stmt.setDate(9, req.getEngineerDeadline());
-            stmt.setDate(10, req.getReviewerDeadline());
+                    "reviewer_deadline=? WHERE id = "+req.getId()+";");
+            stmt.setString(1, req.getName());
+            stmt.setString(2, req.getDescription());
+            stmt.setInt(3, req.getStage());
+            stmt.setLong(4, req.getCreatorId());
+            stmt.setLong(5, req.getEngineerId());
+            stmt.setLong(6, req.getReviewerId());
+            stmt.setInt(7, req.getPriority());
+            stmt.setDate(8, req.getEngineerDeadline());
+            stmt.setDate(9, req.getReviewerDeadline());
             int result = stmt.executeUpdate();
             return result == 1;
         } catch (SQLException e) {
@@ -87,10 +101,15 @@ public class RequirementDAO {
         }
     }
 
+    /**
+     * get req where user with userId is either creator, engineer or reviewer.
+     * @param userId
+     * @return list of req
+     */
     public List<Requirement> getRelatedReq(Long userId){
         Connection conn = connectionHandler.getConn();
         try {
-            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE creator_id=? OR engineer_id=? OR reviewer_id=?;");
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE creator_id="+userId+" OR engineer_id="+userId+" OR reviewer_id="+userId+";");
             ResultSet rs = stmt.executeQuery();
             List<Requirement> reqs = requirementLoader.loadList(rs);
             return reqs;

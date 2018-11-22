@@ -24,7 +24,7 @@ public class DBConn {
 		}
 		catch(Exception e)
 		{ 
-			System.out.println("message "+e.getMessage());
+			System.out.println("Cannot connect to database: "+e.getMessage());
 		}  
 		return conn;
 	}

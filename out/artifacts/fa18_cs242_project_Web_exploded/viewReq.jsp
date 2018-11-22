@@ -6,6 +6,15 @@
 <%@ page import="database.UserDAO" %>
 <%@ page import="model.requirement.Requirement" %>
 <%@ page import="database.RequirementDAO" %>
+<%@ page import="java.util.List" %>
+
+<%
+    User user = (User)session.getAttribute("user");
+    if (user==null){
+        String redirectURL = "http://localhost:8080/fa18-cs242-project";
+        response.sendRedirect(redirectURL);
+    }
+%>
 
 <%
     String name = request.getParameter("name");
@@ -16,22 +25,27 @@
     String reviewerDeadlineStr = request.getParameter("reviewer-deadline");
     String description = request.getParameter("description");
     User currUser = (User)session.getAttribute("user");
+    RequirementDAO requirementDAO = new RequirementDAO();
     if (name!=null && engineerName!=null && currUser!=null){
         UserDAO userDAO = new UserDAO();
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date engineerDeadline = sdf1.parse(engineerDeadlineStr);
-        Date sqlEngineerDate = new Date(engineerDeadline.getTime());
-        java.util.Date reviewerDeadline = sdf1.parse(reviewerDeadlineStr);
-        Date sqlReviewerDate = new Date(reviewerDeadline.getTime());
+        Date sqlEngineerDate=null;
+        Date sqlReviewerDate=null;
+        if (engineerDeadlineStr!=""){
+            java.util.Date engineerDeadline = sdf1.parse(engineerDeadlineStr);
+            sqlEngineerDate = new Date(engineerDeadline.getTime());
+        }
+
+        if (reviewerDeadlineStr!=""){
+            java.util.Date reviewerDeadline = sdf1.parse(reviewerDeadlineStr);
+            sqlReviewerDate = new Date(reviewerDeadline.getTime());
+        }
         Integer priority = Integer.parseInt(priorityStr);
         Long engineerId = userDAO.getId(engineerName);
         Long reviewerId = userDAO.getId(reviewerName);
         Long creatorId = currUser.getId();
         Requirement req = new Requirement(null,name,description,new Integer(0),creatorId,engineerId,reviewerId,priority,sqlEngineerDate,sqlReviewerDate);
-        RequirementDAO requirementDAO = new RequirementDAO();
         boolean insert = requirementDAO.insertReq(req);
-
-
     }
 %>
 
@@ -60,14 +74,37 @@
         </div>
         <div class="col-sm-8 bg-light" style="border-radius:8px;margin-top:40px;margin-left:20px;min-height: 500px">
             <div class="heading">
-                <i class="fa fa-tasks" aria-hidden="true"></i><span style="margin-left:10px">My Requirements</span>
+                <i class="fas fa-project-diagram"></i><span style="margin-left:10px">My Requirements</span>
             </div>
         <hr/>
+            <%
+                List<Requirement> reqs = requirementDAO.getRelatedReq(currUser.getId());
+                for (Requirement req:reqs){
+                    %>
+            <div class="req-item" id=<%=req.getId()%>>
+                <div class = "req-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <div class = "req-name">
+                    <%=req.getName()%>
+                </div>
+                <div class="req-toolbar" id=<%=req.getId()%>>
+                    <div class="req-button" id=<%=req.getId()%>>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="req-button" id=<%=req.getId()%>>
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+
+            <%
+                }
+            %>
         </div>
     </div>
 </div>
-
 </body>
-
 <script type="text/javascript" src='js/main.js'></script>
+<script type="text/javascript" src="js/viewReq.js"></script>
 </html>

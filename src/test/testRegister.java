@@ -1,12 +1,7 @@
 package test;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 
 import junit.framework.Assert;
-import org.junit.*;
-
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlButton;

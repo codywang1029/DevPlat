@@ -313,5 +313,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="commons-codec-1.10" level="project" />
+    <orderEntry type="library" name="jwebunit-1.1.1" level="project" />
   </component>
 </module>

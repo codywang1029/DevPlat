@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role='form' id='login-form' name='login-form' method="post" action="viewReq.jsp">
+            <form role='form' id='create-req' name='create-req' method="post" action="viewReq.jsp">
             <div class="modal-body">
                     <div class='form-group'>
                         <label>Name</label> <input type='text' class='form-control'
@@ -15,7 +15,7 @@
                     </div>
                 <div class="form-group">
                     <label>Priority</label>
-                    <select class="custom-select" name="priority" required>
+                    <select class="custom-select" name="priority"  required>
                         <option selected>Choose...</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -52,7 +52,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary" id="create-submit">Save changes</button>
             </div>
             </form>
         </div>
