@@ -47,6 +47,42 @@
         Requirement req = new Requirement(null,name,description,new Integer(0),creatorId,engineerId,reviewerId,priority,sqlEngineerDate,sqlReviewerDate);
         boolean insert = requirementDAO.insertReq(req);
     }
+    else{
+        name = request.getParameter("edit-name");
+        if (name!=null && currUser!=null){
+            Long id = Long.parseLong(request.getParameter("edit-id"));
+            priorityStr = request.getParameter("edit-priority");
+            engineerName = request.getParameter("edit-engineer");
+            reviewerName = request.getParameter("edit-reviewer");
+            engineerDeadlineStr = request.getParameter("edit-engineer-deadline");
+            reviewerDeadlineStr = request.getParameter("edit-reviewer-deadline");
+            description = request.getParameter("edit-description");
+            Integer stage = Integer.parseInt(request.getParameter("edit-stage"));
+            UserDAO userDAO = new UserDAO();
+            SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+            Date sqlEngineerDate=null;
+            Date sqlReviewerDate=null;
+            if (engineerDeadlineStr!=""){
+                java.util.Date engineerDeadline = sdf1.parse(engineerDeadlineStr);
+                sqlEngineerDate = new Date(engineerDeadline.getTime());
+            }
+
+            if (reviewerDeadlineStr!=""){
+                java.util.Date reviewerDeadline = sdf1.parse(reviewerDeadlineStr);
+                sqlReviewerDate = new Date(reviewerDeadline.getTime());
+            }
+            Integer priority = Integer.parseInt(priorityStr);
+            Long engineerId = userDAO.getId(engineerName);
+            Long reviewerId = userDAO.getId(reviewerName);
+            Long creatorId = currUser.getId();
+            Requirement req = new Requirement(id,name,description,stage,creatorId,engineerId,reviewerId,priority,sqlEngineerDate,sqlReviewerDate);
+            boolean update = requirementDAO.updateReq(req);
+        }
+
+    }
+
+
+
 %>
 
 <!DOCTYPE html>
@@ -77,33 +113,81 @@
                 <i class="fas fa-project-diagram"></i><span style="margin-left:10px">My Requirements</span>
             </div>
         <hr/>
+
+
             <%
-                List<Requirement> reqs = requirementDAO.getRelatedReq(currUser.getId());
+                List<Requirement> reqs = requirementDAO.getReqAsCreator(currUser.getId());
                 for (Requirement req:reqs){
                     %>
+
             <div class="req-item" id=<%=req.getId()%>>
                 <div class = "req-icon">
-                    <i class="fas fa-file-invoice"></i>
+                    <i class="fas fa-pencil-ruler"></i>
                 </div>
                 <div class = "req-name">
                     <%=req.getName()%>
                 </div>
                 <div class="req-toolbar" id=<%=req.getId()%>>
-                    <div class="req-button" id=<%=req.getId()%>>
+                    <div class="req-button" name="edit-req" id="<%=req.getId()%>">
                         <i class="fas fa-edit"></i>
                     </div>
-                    <div class="req-button" id=<%=req.getId()%>>
+                    <div class="req-button" name="delete-req" id=<%=req.getId()%>>
                         <i class="fas fa-trash"></i>
                     </div>
                 </div>
             </div>
+            <%
+                }
+            %>
 
+
+
+            <%
+                reqs = requirementDAO.getReqAsEngineer(currUser.getId());
+                for (Requirement req:reqs){
+            %>
+            <div class="req-item" id=<%=req.getId()%>>
+                <div class = "req-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <div class = "req-name">
+                    <%=req.getName()%>
+                </div>
+                <div class="req-toolbar" id=<%=req.getId()%>>
+                    <div class="req-button" name="engineer-complete" id="<%=req.getId()%>">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+            <%
+                }
+            %>
+
+
+            <%
+                reqs = requirementDAO.getReqAsReviwer(currUser.getId());
+                for (Requirement req:reqs){
+            %>
+            <div class="req-item" id=<%=req.getId()%>>
+                <div class = "req-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class = "req-name">
+                    <%=req.getName()%>
+                </div>
+                <div class="req-toolbar" id=<%=req.getId()%>>
+                    <div class="req-button" name="reviewer-complete" id="<%=req.getId()%>">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                </div>
+            </div>
             <%
                 }
             %>
         </div>
     </div>
 </div>
+<%@include file="editReq.jsp"%>
 </body>
 <script type="text/javascript" src='js/main.js'></script>
 <script type="text/javascript" src="js/viewReq.js"></script>

@@ -51,6 +51,24 @@ public class RequirementDAO {
 
     /**
      * delete a req based on name
+     * @param id
+     * @return true for success, false for failure
+     */
+    public boolean deleteReq(Long id) {
+        Connection conn = connectionHandler.getConn();
+        try {
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM" + TABLE + "WHERE id=" + id+";");
+            int result = stmt.executeUpdate();
+            return result == 1;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
+
+
+    /**
+     * delete a req based on name
      * @param name
      * @return true for success, false for failure
      */
@@ -66,6 +84,7 @@ public class RequirementDAO {
         }
     }
 
+
     /**
      * update a req based on
      * @param req
@@ -74,7 +93,7 @@ public class RequirementDAO {
     public boolean updateReq(Requirement req){
         Connection conn = connectionHandler.getConn();
         try {
-            PreparedStatement stmt = conn.prepareStatement("UPDATE " + TABLE + "SET " +
+            PreparedStatement stmt = conn.prepareStatement("UPDATE" + TABLE + "SET " +
                     "name=?," +
                     "description=?," +
                     "stage=?," +
@@ -101,23 +120,66 @@ public class RequirementDAO {
         }
     }
 
-    /**
-     * get req where user with userId is either creator, engineer or reviewer.
-     * @param userId
-     * @return list of req
-     */
-    public List<Requirement> getRelatedReq(Long userId){
+
+    public Requirement getRequirement(Long id){
         Connection conn = connectionHandler.getConn();
         try {
-            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE creator_id="+userId+" OR engineer_id="+userId+" OR reviewer_id="+userId+";");
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE id="+id+";");
             ResultSet rs = stmt.executeQuery();
-            List<Requirement> reqs = requirementLoader.loadList(rs);
-            return reqs;
+            return requirementLoader.loadList(rs).get(0);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
         }
+    }
 
+
+    /**
+     * get req where user with userId is the creator
+     * @param userId
+     * @return list of req
+     */
+    public List<Requirement> getReqAsCreator(Long userId){
+        Connection conn = connectionHandler.getConn();
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE creator_id="+userId+";");
+            ResultSet rs = stmt.executeQuery();
+            return requirementLoader.loadList(rs);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * get req where user with userId is the engineer
+     * @param userId
+     * @return list of req
+     */
+    public List<Requirement> getReqAsEngineer(Long userId){
+        Connection conn = connectionHandler.getConn();
+        return getRequirements(userId, conn, "WHERE stage=0 AND engineer_id=");
+    }
+
+    private List<Requirement> getRequirements(Long userId, Connection conn, String s) {
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + s +userId+";");
+            ResultSet rs = stmt.executeQuery();
+            return requirementLoader.loadList(rs);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * get req where user with userId is the engineer
+     * @param userId
+     * @return list of req
+     */
+    public List<Requirement> getReqAsReviwer(Long userId){
+        Connection conn = connectionHandler.getConn();
+        return getRequirements(userId, conn, "WHERE stage=1 AND reviewer_id=");
     }
 
 

@@ -14,6 +14,12 @@ div.heading{
     margin: 20px;
 }
 
+div.sub-heading{
+    font-family: Sans-serif;
+    font-size:18px;
+    margin:16px 24px 10px;
+}
+
 hr {
     border: 0;
     height: 1px;
@@ -21,10 +27,10 @@ hr {
 }
 
 .req-item{
-    width:150px;
-    height:180px;
+    width:130px;
+    height:160px;
     margin-top:10px;
-    margin-left:40px;
+    margin-left:20px;
     margin-right:20px;
     border-radius:8px;
     float:left;
@@ -33,18 +39,17 @@ hr {
 
 .req-item:hover{
     background-color: #eeeeee;
-    min-width:150px;
-    min-height:180px;
+
     transition: background-color 1s;
 }
 
 .req-icon{
-    font-size: 75px;
+    font-size: 60px;
 }
 
 .req-name{
     font-family: Sans-serif;
-    font-size:14px;
+    font-size:12px;
     text-align: center;
 }
 
@@ -52,7 +57,7 @@ hr {
     width: 25px;
     height:25px;
     border-radius: 4px;
-    margin-left:18px;
+    margin-left:10px;
     margin-right: 10px;
     vertical-align: center;
     display: inline-block;
@@ -67,7 +72,7 @@ hr {
 .req-toolbar{
     margin-top: 10px;
     float: bottom;
-    width: 140px;
+    width: 130px;
     display: none;
 }
 

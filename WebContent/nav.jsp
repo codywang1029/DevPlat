@@ -24,7 +24,7 @@
                 </div>
             </li>
 
-            <%@include file="create_req.jsp"%>
+            <%@include file="createReq.jsp"%>
 
         </ul>
     </div>

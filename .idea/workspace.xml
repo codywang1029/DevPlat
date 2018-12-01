@@ -7,7 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27048080-7f00-468b-8afd-54d8ce330ec0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WebContent/editReq.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/create_req.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/createReq.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/css/viewReq.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/css/viewReq.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/viewReq.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/viewReq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/viewReq.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/viewReq.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fa18-cs242-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fa18-cs242-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/WEB-INF/classes/database/RequirementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/WEB-INF/classes/database/RequirementDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/WEB-INF/classes/test/testCreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/WEB-INF/classes/test/testCreate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/create_req.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/js/viewReq.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/js/viewReq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/viewReq.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/viewReq.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/RequirementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/RequirementDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testCreate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,47 +36,47 @@
     <session id="-784742817">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.14" value="2" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="7" />
-          <entry key="java" value="34" />
-          <entry key="js" value="7" />
-          <entry key="jsp" value="13" />
+          <entry key="css" value="8" />
+          <entry key="java" value="52" />
+          <entry key="js" value="10" />
+          <entry key="jsp" value="23" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="7" />
-          <entry key="JAVA" value="34" />
-          <entry key="JSP" value="13" />
-          <entry key="JavaScript" value="7" />
+          <entry key="CSS" value="8" />
+          <entry key="JAVA" value="52" />
+          <entry key="JSP" value="23" />
+          <entry key="JavaScript" value="10" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="839" />
-          <entry key="java" value="3563" />
-          <entry key="js" value="356" />
-          <entry key="jsp" value="3293" />
+          <entry key="css" value="909" />
+          <entry key="java" value="4397" />
+          <entry key="js" value="1559" />
+          <entry key="jsp" value="4110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="839" />
-          <entry key="JAVA" value="3552" />
-          <entry key="JSP" value="3293" />
-          <entry key="JavaScript" value="356" />
+          <entry key="CSS" value="909" />
+          <entry key="JAVA" value="4386" />
+          <entry key="JSP" value="4110" />
+          <entry key="JavaScript" value="1559" />
           <entry key="SQL" value="11" />
         </counts>
       </usages-collector>
@@ -71,8 +87,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/js/viewReq.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="78">
+              <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/requirement/Requirement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/editReq.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -80,74 +114,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/viewReq.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/create_req.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/js/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/CheckUsername.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/CheckUserExist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/testCreate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
-              <caret line="113" column="72" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+            <state relative-caret-position="398">
+              <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/css/viewReq.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/DeleteReq.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -155,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/RequirementDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="61" column="30" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="30" />
+            <state relative-caret-position="256">
+              <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,22 +181,27 @@
         <option value="$PROJECT_DIR$/src/model/user/UserLoader.java" />
         <option value="$PROJECT_DIR$/src/model/DataLoader.java" />
         <option value="$PROJECT_DIR$/src/model/requirement/Requirement.java" />
-        <option value="$PROJECT_DIR$/src/model/requirement/RequirementLoader.java" />
         <option value="$PROJECT_DIR$/WebContent/main.jsp" />
-        <option value="$PROJECT_DIR$/src/database/UserDAO.java" />
         <option value="$PROJECT_DIR$/WebContent/js/main.js" />
-        <option value="$PROJECT_DIR$/WebContent/js/viewReq.js" />
-        <option value="$PROJECT_DIR$/WebContent/css/viewReq.css" />
         <option value="$PROJECT_DIR$/src/test/testLogin.java" />
         <option value="$PROJECT_DIR$/src/database/DBConn.java" />
         <option value="$PROJECT_DIR$/src/test/testRegister.java" />
         <option value="$PROJECT_DIR$/WebContent/nav.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/viewReq.jsp" />
-        <option value="$PROJECT_DIR$/src/database/RequirementDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/testCreate.java" />
         <option value="$PROJECT_DIR$/WebContent/js/login.js" />
         <option value="$PROJECT_DIR$/src/servlet/CheckUserExist.java" />
         <option value="$PROJECT_DIR$/WebContent/create_req.jsp" />
+        <option value="$PROJECT_DIR$/src/test/testCreate.java" />
+        <option value="$PROJECT_DIR$/src/servlet/DeleteReq.java" />
+        <option value="$PROJECT_DIR$/WebContent/editRep.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/GetReqById.java" />
+        <option value="$PROJECT_DIR$/src/model/requirement/RequirementLoader.java" />
+        <option value="$PROJECT_DIR$/src/database/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/servlet/GetEngineerReviewer.java" />
+        <option value="$PROJECT_DIR$/src/database/RequirementDAO.java" />
+        <option value="$PROJECT_DIR$/WebContent/css/viewReq.css" />
+        <option value="$PROJECT_DIR$/WebContent/viewReq.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/editReq.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/js/viewReq.js" />
       </list>
     </option>
   </component>
@@ -239,6 +233,11 @@
             <path>
               <item name="fa18-cs242-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="fa18-cs242-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fa18-cs242-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fa18-cs242-project" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fa18-cs242-project" type="b2602c69:ProjectViewProjectNode" />
@@ -306,6 +305,13 @@
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fa18-cs242-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fa18-cs242-project" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -320,7 +326,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543184779500" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543698696722" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -331,6 +339,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="servlet" />
       <recent name="model.requirement" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -345,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.test in fa18-cs242-project">
+  <component name="RunManager" selected="Tomcat Server.project">
     <configuration name="test in fa18-cs242-project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fa18-cs242-project" />
       <extension name="coverage">
@@ -591,22 +602,15 @@
       <workItem from="1542738056139" duration="20521000" />
       <workItem from="1542882394070" duration="6640000" />
       <workItem from="1543184066180" duration="349000" />
+      <workItem from="1543340840132" duration="1564000" />
+      <workItem from="1543444352535" duration="933000" />
+      <workItem from="1543543892740" duration="397000" />
+      <workItem from="1543553352135" duration="2148000" />
+      <workItem from="1543617788788" duration="13072000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 10m 28s.xml">
-      <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 10m 53s.xml">
-      <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 11m 26s.xml">
-      <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 15m 53s.xml">
-      <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 17m 56s.xml">
       <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
     </history-entry>
@@ -625,9 +629,21 @@
     <history-entry file="test_in_fa18-cs242-project - 2018.11.25 at 16h 25m 27s.xml">
       <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 11h 48m 04s.xml">
+      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 11h 48m 42s.xml">
+      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 13h 15m 24s.xml">
+      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 13h 15m 57s.xml">
+      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39174000" />
+    <option name="totallyTimeSpent" value="57288000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -642,7 +658,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27382874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2956381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -652,7 +668,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -697,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/requirement/RequirementLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -711,65 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/requirement/Requirement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding>
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1409#1410#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1677#1678#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1804#1805#0" expanded="true" />
-            <element signature="e#1839#1840#0" expanded="true" />
-            <element signature="e#1872#1873#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1966#1967#0" expanded="true" />
-            <element signature="e#2002#2003#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
-            <element signature="e#2122#2123#0" expanded="true" />
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="e#2202#2203#0" expanded="true" />
-            <element signature="e#2264#2265#0" expanded="true" />
-            <element signature="e#2320#2321#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2400#2401#0" expanded="true" />
-            <element signature="e#2462#2463#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -787,41 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/css/viewReq.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/DBConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
           <caret line="26" column="78" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="6" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/nav.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="17" column="176" selection-start-line="17" selection-start-column="176" selection-end-line="17" selection-end-column="176" />
         </state>
       </provider>
     </entry>
@@ -832,41 +751,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testRegister.java">
+    <entry file="file://$PROJECT_DIR$/src/servlet/CheckUserExist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="73" column="44" lean-forward="true" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+        <state relative-caret-position="225">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/js/viewReq.js">
+    <entry file="file://$PROJECT_DIR$/src/test/testRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/viewReq.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/CheckUsername.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="1095">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -877,44 +785,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/CheckUserExist.java">
+    <entry file="file://$PROJECT_DIR$/WebContent/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+        <state relative-caret-position="338">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/testCreate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="113" column="72" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+        <state relative-caret-position="265">
+          <caret line="74" column="54" lean-forward="true" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/CheckUsername.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="51" selection-start-line="22" selection-start-column="17" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/createReq.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/requirement/RequirementLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/GetEngineerReviewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/nav.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/GetReqById.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/css/viewReq.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/DeleteReq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/RequirementDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="256">
+          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/create_req.jsp">
+    <entry file="file://$PROJECT_DIR$/WebContent/editReq.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+        <state relative-caret-position="294">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/viewReq.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/js/viewReq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/requirement/Requirement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -996,7 +1001,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jwebunit-1.1.1</last-edited>
+          <last-edited>gson-2.8.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

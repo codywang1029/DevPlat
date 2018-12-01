@@ -1,13 +1,10 @@
 package test;
 
 import com.gargoylesoftware.htmlunit.html.*;
-import com.gargoylesoftware.htmlunit.javascript.host.html.HTMLSelectElement;
 import database.RequirementDAO;
 import junit.framework.Assert;
 import com.gargoylesoftware.htmlunit.WebClient;
 
-import database.UserDAO;
-import model.requirement.Requirement;
 import org.junit.jupiter.api.Test;
 
 

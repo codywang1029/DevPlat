@@ -18,7 +18,28 @@ public class UserDAO {
 		connectionHandler = new DBConn();
 		userLoader = new UserLoader();
 	}
-	
+
+	public User getUser(Long id){
+		Connection conn = connectionHandler.getConn();
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT"+COLUMN+"FROM"+TABLE+"WHERE id="+id+";");
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				User user = userLoader.loadSingle(rs);
+				connectionHandler.closeConn(conn, stmt);
+				return user;
+			}
+			else {
+				connectionHandler.closeConn(conn, stmt);
+				return null;
+			}
+		}
+		catch (SQLException e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
 	
 	/**
 	 * identify if user is in the database and perform login.
