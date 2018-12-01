@@ -73,6 +73,22 @@ $(document).ready(function(){
         $('#edit').modal('show');
     });
 
+    $("[name='engineer-complete']").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "GetReqById",
+            data: {'id': $(this).attr('id')},
+            dataType: "json",
+            async: false,
+            success: function (data) {
+                console.log(data);
+                $("[name='requirement-id']").val(data.id);
+                $("[name='engineer-id']").val(data.engineerId);
+            }
+        });
+        $('#engineer-complete').modal('show');
+    });
+
     function formatDate(date) {
         var d = new Date(date),
             month = '' + (d.getMonth()+1),

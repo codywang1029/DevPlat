@@ -188,6 +188,7 @@
     </div>
 </div>
 <%@include file="editReq.jsp"%>
+<%@include file="completeReq.jsp"%>
 </body>
 <script type="text/javascript" src='js/main.js'></script>
 <script type="text/javascript" src="js/viewReq.js"></script>
