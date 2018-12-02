@@ -120,7 +120,11 @@ public class RequirementDAO {
         }
     }
 
-
+    /**
+     * return requirement by id
+     * @param id
+     * @return req
+     */
     public Requirement getRequirement(Long id){
         Connection conn = connectionHandler.getConn();
         try {

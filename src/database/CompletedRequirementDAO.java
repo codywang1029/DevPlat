@@ -22,6 +22,11 @@ public class CompletedRequirementDAO {
 		completedRequirementLoader = new CompletedRequirementLoader();
 	}
 
+	/**
+	 * insert a completed requirement
+	 * @param completedRequirement
+	 * @return true on success, false on failure
+	 */
 	public boolean insert(CompletedRequirement completedRequirement){
 		Connection conn = connectionHandler.getConn();
 		try {
@@ -42,6 +47,11 @@ public class CompletedRequirementDAO {
 		}
 	}
 
+	/**
+	 * return completed requirement by id
+	 * @param id
+	 * @return completed requirement
+	 */
 	public CompletedRequirement get(Long id){
 		Connection conn = connectionHandler.getConn();
 		try {
