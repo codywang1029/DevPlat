@@ -8,13 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27048080-7f00-468b-8afd-54d8ce330ec0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/css/viewReq.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/css/viewReq.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/viewReq.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/viewReq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/viewReq.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/viewReq.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/js/viewReq.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/js/viewReq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/viewReq.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/fa18_cs242_project_Web_exploded/viewReq.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proposal.docx" beforeDir="false" afterPath="$PROJECT_DIR$/proposal.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/CompletedRequirementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/CompletedRequirementDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +32,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="14" />
-          <entry key="java" value="60" />
+          <entry key="java" value="63" />
           <entry key="js" value="15" />
           <entry key="jsp" value="29" />
           <entry key="xml" value="1" />
@@ -48,7 +41,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="14" />
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="63" />
           <entry key="JSP" value="29" />
           <entry key="JavaScript" value="15" />
           <entry key="XML" value="1" />
@@ -57,7 +50,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1407" />
-          <entry key="java" value="5091" />
+          <entry key="dummy" value="33" />
+          <entry key="java" value="5667" />
           <entry key="js" value="2289" />
           <entry key="jsp" value="5763" />
         </counts>
@@ -65,9 +59,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1407" />
-          <entry key="JAVA" value="5080" />
+          <entry key="JAVA" value="5656" />
           <entry key="JSP" value="5763" />
           <entry key="JavaScript" value="2289" />
+          <entry key="PLAIN_TEXT" value="33" />
           <entry key="SQL" value="11" />
         </counts>
       </usages-collector>
@@ -75,11 +70,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/viewReq.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="127" column="22" lean-forward="true" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+            <state relative-caret-position="3">
+              <caret line="159" column="52" lean-forward="true" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/testView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/testEngineer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="66" column="73" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/testCreate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="775">
+              <caret line="77" column="5" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,27 +193,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/CompletedRequirementDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/RequirementDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="132" column="9" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -227,7 +231,6 @@
         <option value="$PROJECT_DIR$/WebContent/js/login.js" />
         <option value="$PROJECT_DIR$/src/servlet/CheckUserExist.java" />
         <option value="$PROJECT_DIR$/WebContent/create_req.jsp" />
-        <option value="$PROJECT_DIR$/src/test/testCreate.java" />
         <option value="$PROJECT_DIR$/src/servlet/DeleteReq.java" />
         <option value="$PROJECT_DIR$/WebContent/editRep.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/GetReqById.java" />
@@ -247,6 +250,11 @@
         <option value="$PROJECT_DIR$/WebContent/reqDetail.jsp" />
         <option value="$PROJECT_DIR$/WebContent/js/viewReq.js" />
         <option value="$PROJECT_DIR$/WebContent/viewReq.jsp" />
+        <option value="$PROJECT_DIR$/src/test/testViewReq.java" />
+        <option value="$PROJECT_DIR$/src/test/testCreate.java" />
+        <option value="$PROJECT_DIR$/src/test/testEngineerFinish.java" />
+        <option value="$PROJECT_DIR$/src/test/testView.java" />
+        <option value="$PROJECT_DIR$/src/test/testEngineer.java" />
       </list>
     </option>
   </component>
@@ -365,7 +373,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543720161958" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543791953624" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -376,6 +384,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test" />
       <recent name="servlet" />
       <recent name="database" />
       <recent name="model.completedReq" />
@@ -397,7 +406,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.project">
+  <component name="RunManager" selected="JUnit.test in fa18-cs242-project">
     <configuration name="test in fa18-cs242-project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fa18-cs242-project" />
       <extension name="coverage">
@@ -424,22 +433,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testCreate.testCreatePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fa18-cs242-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testCreate" />
-      <option name="METHOD_NAME" value="testCreatePage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testCreate.testNotExistRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fa18-cs242-project" />
       <extension name="coverage">
@@ -456,7 +449,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testCreate.testSuccessCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testEngineer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fa18-cs242-project" />
       <extension name="coverage">
         <pattern>
@@ -465,9 +458,21 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testCreate" />
-      <option name="METHOD_NAME" value="testSuccessCreate" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="test.testEngineer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fa18-cs242-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.testView" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -610,19 +615,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.project" />
-      <item itemvalue="JUnit.testCreate.testSuccessCreate" />
-      <item itemvalue="JUnit.testCreate.testCreatePage" />
       <item itemvalue="JUnit.testCreate and 2 more" />
       <item itemvalue="JUnit.testCreate.testNotExistRole" />
       <item itemvalue="JUnit.test in fa18-cs242-project" />
+      <item itemvalue="JUnit.testView" />
+      <item itemvalue="JUnit.testEngineer" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.test in fa18-cs242-project" />
+        <item itemvalue="JUnit.testEngineer" />
+        <item itemvalue="JUnit.testView" />
         <item itemvalue="JUnit.testCreate.testNotExistRole" />
         <item itemvalue="JUnit.testCreate and 2 more" />
-        <item itemvalue="JUnit.testCreate.testSuccessCreate" />
-        <item itemvalue="JUnit.testCreate.testCreatePage" />
       </list>
     </recent_temporary>
   </component>
@@ -647,44 +652,44 @@
       <workItem from="1543444352535" duration="933000" />
       <workItem from="1543543892740" duration="397000" />
       <workItem from="1543553352135" duration="2148000" />
-      <workItem from="1543617788788" duration="23837000" />
+      <workItem from="1543617788788" duration="26358000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 17m 56s.xml">
-      <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testCreate_testSuccessCreate - 2018.11.22 at 14h 18m 12s.xml">
-      <configuration name="testCreate.testSuccessCreate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testCreate_and_2_more - 2018.11.22 at 14h 18m 44s.xml">
-      <configuration name="testCreate and 2 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testCreate_testNotExistRole - 2018.11.22 at 14h 20m 46s.xml">
-      <configuration name="testCreate.testNotExistRole" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_fa18-cs242-project - 2018.11.25 at 16h 24m 19s.xml">
-      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_fa18-cs242-project - 2018.11.25 at 16h 25m 27s.xml">
-      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 11h 48m 04s.xml">
-      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 11h 48m 42s.xml">
-      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 13h 15m 24s.xml">
-      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test_in_fa18-cs242-project - 2018.11.27 at 13h 15m 57s.xml">
       <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 47m 04s.xml">
+      <configuration name="testEngineerFinish" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 49m 00s.xml">
+      <configuration name="testEngineerFinish" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 53m 24s.xml">
+      <configuration name="testEngineerFinish" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 53m 55s.xml">
+      <configuration name="testEngineerFinish" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 54m 22s.xml">
+      <configuration name="testEngineerFinish" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 54m 56s.xml">
+      <configuration name="testEngineerFinish" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_fa18-cs242-project - 2018.12.02 at 16h 55m 34s.xml">
+      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineer - 2018.12.02 at 17h 02m 29s.xml">
+      <configuration name="testEngineer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testEngineer - 2018.12.02 at 17h 03m 21s.xml">
+      <configuration name="testEngineer" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68053000" />
+    <option name="totallyTimeSpent" value="70574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,16 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testCreate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="74" column="54" lean-forward="true" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,10 +1048,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testCreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="77" column="5" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/viewReq.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="127" column="22" lean-forward="true" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+        <state relative-caret-position="3">
+          <caret line="159" column="52" lean-forward="true" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testEngineer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="66" column="73" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
         </state>
       </provider>
     </entry>
