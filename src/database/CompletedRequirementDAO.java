@@ -42,4 +42,16 @@ public class CompletedRequirementDAO {
 		}
 	}
 
+	public CompletedRequirement get(Long id){
+		Connection conn = connectionHandler.getConn();
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN+"FROM" + TABLE + "WHERE requirement_id="+id+";");
+			ResultSet rs = stmt.executeQuery();
+			return completedRequirementLoader.loadList(rs).get(0);
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
 }

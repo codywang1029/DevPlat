@@ -93,6 +93,8 @@
             rel="stylesheet" id="bootstrap-css">
     <link href="css/viewReq.css" type="text/css" rel="stylesheet"
           id="main-css">
+    <link href="css/detail.css" type="text/css" rel="stylesheet"
+          id="detail-css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -121,10 +123,10 @@
                     %>
 
             <div class="req-item" id=<%=req.getId()%>>
-                <div class = "req-icon">
+                <div class = "req-icon" id=<%=req.getId()%>>
                     <i class="fas fa-pencil-ruler"></i>
                 </div>
-                <div class = "req-name">
+                <div class = "req-name" id=<%=req.getId()%>>
                     <%=req.getName()%>
                 </div>
                 <div class="req-toolbar" id=<%=req.getId()%>>
@@ -189,6 +191,8 @@
 </div>
 <%@include file="editReq.jsp"%>
 <%@include file="completeReq.jsp"%>
+<%@include file="reqDetail.jsp"%>
+
 </body>
 <script type="text/javascript" src='js/main.js'></script>
 <script type="text/javascript" src="js/viewReq.js"></script>
