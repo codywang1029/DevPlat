@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27048080-7f00-468b-8afd-54d8ce330ec0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/database/CompletedRequirementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/CompletedRequirementDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/RequirementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/RequirementDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="27048080-7f00-468b-8afd-54d8ce330ec0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +18,7 @@
     <session id="-784742817">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="3" />
@@ -173,7 +170,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/CompletedRequirementDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
+            <state relative-caret-position="270">
               <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
             </state>
           </provider>
@@ -380,7 +377,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543792052776" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543793296414" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -659,14 +656,11 @@
       <workItem from="1543444352535" duration="933000" />
       <workItem from="1543543892740" duration="397000" />
       <workItem from="1543553352135" duration="2148000" />
-      <workItem from="1543617788788" duration="26535000" />
+      <workItem from="1543617788788" duration="27175000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testEngineerFinish - 2018.12.02 at 16h 49m 00s.xml">
-      <configuration name="testEngineerFinish" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testEngineerFinish - 2018.12.02 at 16h 53m 24s.xml">
       <configuration name="testEngineerFinish" configurationId="JUnit" />
     </history-entry>
@@ -694,9 +688,12 @@
     <history-entry file="test_in_fa18-cs242-project - 2018.12.02 at 17h 05m 48s.xml">
       <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test_in_fa18-cs242-project - 2018.12.02 at 17h 08m 47s.xml">
+      <configuration name="test in fa18-cs242-project" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70751000" />
+    <option name="totallyTimeSpent" value="71391000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,7 +706,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2956381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -721,7 +717,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1081,7 +1077,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/CompletedRequirementDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
+        <state relative-caret-position="270">
           <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
         </state>
       </provider>
