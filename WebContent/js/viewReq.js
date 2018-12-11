@@ -89,6 +89,41 @@ $(document).ready(function(){
         $('#engineer-complete').modal('show');
     });
 
+    $("[name='close-req']").click(function(){
+        if (confirm('Do you want to close the requirement?')) {
+            $.ajax({
+                type: "POST",
+                url: "CloseReq",
+                data: {'id': $(this).attr('id')},
+                dataType: "text",
+                success: function (response) {
+                    if (response == "success") {
+                        location.reload();
+                    }
+                    else{
+                        alert("Error")
+                    }
+                }
+            });
+        }
+    });
+
+    $("[name='reviewer-complete']").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "GetReqById",
+            data: {'id': $(this).attr('id')},
+            dataType: "json",
+            async: false,
+            success: function (data) {
+                console.log(data);
+                $("[name='requirement-id']").val(data.id);
+                $("[name='reviewer-id']").val(data.engineerId);
+            }
+        });
+        $('#reviewer-complete').modal('show');
+    });
+
 
     $(".req-icon,.req-name").click(function(){
         var engineerId;
@@ -112,8 +147,7 @@ $(document).ready(function(){
                 else if(data.priority==3){
                     $("#detail-priority").css('background-color','#FF5722');
                 }
-                console.log("stage: "+data.stage);
-                if (data.stage == 1 || data.stage==2) {
+                if (data.stage>0) {
                     $("#stage1").css('background-color', '#009688');
                     $.ajax({
                         type: "POST",
@@ -121,21 +155,37 @@ $(document).ready(function(){
                         data: {'id': id},
                         dataType: "json",
                         async: false,
-                        success: function (data) {
-                            $("#completed-time").text(data.completedDate);
-                            $("#engineer-comment").text(data.comment);
+                        success: function (req) {
+                            $("#completed-time").text(req.completedDate);
+                            $("#engineer-comment").text(req.comment);
                             $("#engineer-completed").show();
                         }
                     });
-                    if (data.stage == 2) {
+
+                    console.log("stagehere: "+data.stage);
+                    if (data.stage >1) {
                         $("#stage2").css('background-color', '#009688');
+                        $.ajax({
+                            type: "POST",
+                            url: "GetReviewedReq",
+                            data: {'id': id},
+                            dataType: "json",
+                            async: false,
+                            success: function (req) {
+                                $("#reviewed-time").text(req.reviewedDate);
+                                $("#reviewer-comment").text(req.comment);
+                                $("#reviewer-completed").show();
+                            }
+                        });
                     }
                     else{
                         $("#stage2").css('background-color', '#FF5722');
+                        $("#reviewer-completed").hide();
                     }
                 }
                 else{
                     $("#engineer-completed").hide();
+                    $("#reviewer-completed").hide();
                     $("#stage2").css('background-color', '#FF5722');
                     $("#stage1").css('background-color', '#FF5722');
                 }
@@ -167,7 +217,7 @@ $(document).ready(function(){
     function formatDate(date) {
         var d = new Date(date),
             month = '' + (d.getMonth()+1),
-            day = '' + (d.getDate()+1),
+            day = '' + (d.getDate()+2),
             year = d.getFullYear();
 
         if (month.length < 2) month = '0' + month;

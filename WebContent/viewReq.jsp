@@ -7,6 +7,9 @@
 <%@ page import="model.requirement.Requirement" %>
 <%@ page import="database.RequirementDAO" %>
 <%@ page import="java.util.List" %>
+<%@ page import="model.user.CurrentUser" %>
+<%@ page import="database.LogDAO" %>
+<%@ page import="model.log.Log" %>
 
 <%
     User user = (User)session.getAttribute("user");
@@ -76,6 +79,10 @@
             Long reviewerId = userDAO.getId(reviewerName);
             Long creatorId = currUser.getId();
             Requirement req = new Requirement(id,name,description,stage,creatorId,engineerId,reviewerId,priority,sqlEngineerDate,sqlReviewerDate);
+            CurrentUser currentUser = CurrentUser.getInstance();
+            LogDAO logDAO = new LogDAO();
+            Log log= new Log(null,currentUser.id,id,"Edit");
+            logDAO.insertLog(log);
             boolean update = requirementDAO.updateReq(req);
         }
 
@@ -116,9 +123,34 @@
             </div>
         <hr/>
 
+            <%
+                List<Requirement> reqs = requirementDAO.getReqAsCreatorFinished(currUser.getId());
+                for (Requirement req:reqs){
+            %>
+
+            <div class="req-item" id=<%=req.getId()%>>
+                <div class = "req-icon" id=<%=req.getId()%>>
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <div class = "req-name" id=<%=req.getId()%>>
+                    <%=req.getName()%>
+                </div>
+                <div class="req-toolbar" id=<%=req.getId()%>>
+                    <div class="req-button" name="edit-req" id="<%=req.getId()%>">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="req-button" name="close-req" id="<%=req.getId()%>">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </div>
+            <%
+                }
+            %>
+
 
             <%
-                List<Requirement> reqs = requirementDAO.getReqAsCreator(currUser.getId());
+                reqs = requirementDAO.getReqAsCreatorNotFinished(currUser.getId());
                 for (Requirement req:reqs){
                     %>
 
@@ -149,10 +181,10 @@
                 for (Requirement req:reqs){
             %>
             <div class="req-item" id=<%=req.getId()%>>
-                <div class = "req-icon">
+                <div class = "req-icon" id=<%=req.getId()%>>
                     <i class="fas fa-wrench"></i>
                 </div>
-                <div class = "req-name">
+                <div class = "req-name" id=<%=req.getId()%>>
                     <%=req.getName()%>
                 </div>
                 <div class="req-toolbar" id=<%=req.getId()%>>
@@ -171,10 +203,10 @@
                 for (Requirement req:reqs){
             %>
             <div class="req-item" id=<%=req.getId()%>>
-                <div class = "req-icon">
+                <div class = "req-icon" id=<%=req.getId()%>>
                     <i class="fas fa-search"></i>
                 </div>
-                <div class = "req-name">
+                <div class = "req-name" id=<%=req.getId()%>>
                     <%=req.getName()%>
                 </div>
                 <div class="req-toolbar" id=<%=req.getId()%>>
@@ -186,11 +218,29 @@
             <%
                 }
             %>
+
+            <%
+                reqs = requirementDAO.getReqAsCreatorClosed(currUser.getId());
+                for (Requirement req:reqs){
+            %>
+            <div class="req-item" id=<%=req.getId()%>>
+                <div class = "req-icon" id=<%=req.getId()%>>
+                    <i class="fas fa-clipboard-check" style="color:lightgreen"></i>
+                </div>
+                <div class = "req-name" id=<%=req.getId()%>>
+                    <%=req.getName()%>
+                </div>
+            </div>
+            <%
+                }
+            %>
+
         </div>
     </div>
 </div>
 <%@include file="editReq.jsp"%>
 <%@include file="completeReq.jsp"%>
+<%@include file="reviewReq.jsp"%>
 <%@include file="reqDetail.jsp"%>
 
 </body>

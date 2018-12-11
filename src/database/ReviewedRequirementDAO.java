@@ -1,51 +1,49 @@
 package database;
 
-import model.completedReq.CompletedRequirement;
-import model.completedReq.CompletedRequirementLoader;
 import model.log.Log;
 import model.requirement.Requirement;
+import model.reviewedReq.ReviewedReq;
+import model.reviewedReq.ReviewedRequirementLoader;
 import model.user.CurrentUser;
-import model.user.User;
-import model.user.UserLoader;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CompletedRequirementDAO {
-	private static final String TABLE = " devplat.engineer_complete ";
-	private static final String COLUMN = " requirement_id, engineer_id, comment, complete_date ";
+public class ReviewedRequirementDAO {
+	private static final String TABLE = " devplat.reviewer_complete ";
+	private static final String COLUMN = " requirement_id, reviewer_id, comment, reviewed_date ";
 	private DBConn connectionHandler;
-	private CompletedRequirementLoader completedRequirementLoader;
+	private ReviewedRequirementLoader reviewedRequirementLoader;
 
-	public CompletedRequirementDAO(){
+	public ReviewedRequirementDAO(){
 		connectionHandler = new DBConn();
-		completedRequirementLoader = new CompletedRequirementLoader();
+		reviewedRequirementLoader = new ReviewedRequirementLoader();
 	}
 
 	/**
-	 * insert a completed requirement
-	 * @param completedRequirement
+	 * insert a reviewed requirement
+	 * @param reviewedReq
 	 * @return true on success, false on failure
 	 */
-	public boolean insert(CompletedRequirement completedRequirement){
+	public boolean insert(ReviewedReq reviewedReq){
 		Connection conn = connectionHandler.getConn();
 		try {
 			PreparedStatement stmt = conn.prepareStatement("INSERT INTO" + TABLE + "(" + COLUMN + ")" + "VALUES(?,?,?,?);");
-			stmt.setLong(1, completedRequirement.getRequirementId());
-			stmt.setLong(2, completedRequirement.getEngineerId());
-			stmt.setString(3,completedRequirement.getComment());
-			stmt.setDate(4, completedRequirement.getCompletedDate());
+			stmt.setLong(1, reviewedReq.getRequirementId());
+			stmt.setLong(2, reviewedReq.getReviewedId());
+			stmt.setString(3,reviewedReq.getComment());
+			stmt.setDate(4, reviewedReq.getReviewedDate());
 			int result = stmt.executeUpdate();
 			RequirementDAO requirementDAO = new RequirementDAO();
-			Requirement req = requirementDAO.getRequirement(completedRequirement.getRequirementId());
-			req.setStage(1);
+			Requirement req = requirementDAO.getRequirement(reviewedReq.getRequirementId());
+			req.setStage(2);
 			requirementDAO.updateReq(req);
 
 			CurrentUser currentUser = CurrentUser.getInstance();
 			LogDAO logDAO = new LogDAO();
-			Log log= new Log(null,currentUser.id,completedRequirement.getRequirementId(),"Completed");
+			Log log= new Log(null,currentUser.id,reviewedReq.getRequirementId(),"Reviewed");
 			logDAO.insertLog(log);
 
 			return result == 1;
@@ -60,12 +58,12 @@ public class CompletedRequirementDAO {
 	 * @param id
 	 * @return completed requirement
 	 */
-	public CompletedRequirement get(Long id){
+	public ReviewedReq get(Long id){
 		Connection conn = connectionHandler.getConn();
 		try {
 			PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN+"FROM" + TABLE + "WHERE requirement_id="+id+";");
 			ResultSet rs = stmt.executeQuery();
-			return completedRequirementLoader.loadList(rs).get(0);
+			return reviewedRequirementLoader.loadList(rs).get(0);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			return null;

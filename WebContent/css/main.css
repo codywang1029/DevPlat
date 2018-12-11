@@ -6,3 +6,8 @@
     color:whitesmoke;
 }
 
+#log-row:hover{
+    background-color: #eeeeee;
+    transition: background-color 0.5s;
+}
+

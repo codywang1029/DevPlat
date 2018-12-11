@@ -1,7 +1,11 @@
 package database;
 
+import model.log.Log;
 import model.requirement.Requirement;
 import model.requirement.RequirementLoader;
+import model.reviewedReq.ReviewedReq;
+import model.user.CurrentUser;
+import org.apache.regexp.RE;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,6 +45,11 @@ public class RequirementDAO {
             stmt.setDate(8, req.getEngineerDeadline());
             stmt.setDate(9, req.getReviewerDeadline());
             int result = stmt.executeUpdate();
+            CurrentUser currentUser = CurrentUser.getInstance();
+            LogDAO logDAO = new LogDAO();
+            Log log= new Log(null,currentUser.id,this.getRequirement(req.getName()).getId(),"Created");
+            logDAO.insertLog(log);
+            connectionHandler.closeConn(conn,stmt);
             return result == 1;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -50,20 +59,18 @@ public class RequirementDAO {
     }
 
     /**
-     * delete a req based on name
+     * delete a req based on id
      * @param id
      * @return true for success, false for failure
      */
     public boolean deleteReq(Long id) {
-        Connection conn = connectionHandler.getConn();
-        try {
-            PreparedStatement stmt = conn.prepareStatement("DELETE FROM" + TABLE + "WHERE id=" + id+";");
-            int result = stmt.executeUpdate();
-            return result == 1;
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
+        Requirement req = this.getRequirement(id);
+        req.setStage(-1);
+        CurrentUser currentUser = CurrentUser.getInstance();
+        LogDAO logDAO = new LogDAO();
+        Log log= new Log(null,currentUser.id,this.getRequirement(req.getName()).getId(),"Deleted");
+        logDAO.insertLog(log);
+        return this.updateReq(req);
     }
 
 
@@ -77,6 +84,7 @@ public class RequirementDAO {
         try {
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM" + TABLE + "WHERE name=\"" + name+"\";");
             int result = stmt.executeUpdate();
+            connectionHandler.closeConn(conn,stmt);
             return result == 1;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -113,6 +121,7 @@ public class RequirementDAO {
             stmt.setDate(8, req.getEngineerDeadline());
             stmt.setDate(9, req.getReviewerDeadline());
             int result = stmt.executeUpdate();
+            connectionHandler.closeConn(conn,stmt);
             return result == 1;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -130,7 +139,28 @@ public class RequirementDAO {
         try {
             PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE id="+id+";");
             ResultSet rs = stmt.executeQuery();
-            return requirementLoader.loadList(rs).get(0);
+            Requirement req = requirementLoader.loadList(rs).get(0);
+            connectionHandler.closeConn(conn,stmt);
+            return req;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * return requirement by id
+     * @param name
+     * @return req
+     */
+    public Requirement getRequirement(String name){
+        Connection conn = connectionHandler.getConn();
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE name=\""+name+"\";");
+            ResultSet rs = stmt.executeQuery();
+            Requirement req = requirementLoader.loadList(rs).get(0);
+            connectionHandler.closeConn(conn,stmt);
+            return req;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
@@ -143,12 +173,71 @@ public class RequirementDAO {
      * @param userId
      * @return list of req
      */
+    public List<Requirement> getReqAsCreatorNotFinished(Long userId){
+        Connection conn = connectionHandler.getConn();
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE stage=0 AND creator_id="+userId+";");
+            ResultSet rs = stmt.executeQuery();
+            List<Requirement> requirements = requirementLoader.loadList(rs);
+            connectionHandler.closeConn(conn,stmt);
+            return requirements;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * get req where user with userId is the creator
+     * @param userId
+     * @return list of req
+     */
     public List<Requirement> getReqAsCreator(Long userId){
         Connection conn = connectionHandler.getConn();
         try {
             PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE creator_id="+userId+";");
             ResultSet rs = stmt.executeQuery();
-            return requirementLoader.loadList(rs);
+            List<Requirement> requirements = requirementLoader.loadList(rs);
+            connectionHandler.closeConn(conn,stmt);
+            return requirements;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * get req where user with userId is the creator
+     * @param userId
+     * @return list of req
+     */
+    public List<Requirement> getReqAsCreatorClosed(Long userId){
+        Connection conn = connectionHandler.getConn();
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE stage=3 AND creator_id="+userId+";");
+            ResultSet rs = stmt.executeQuery();
+            List<Requirement> requirements = requirementLoader.loadList(rs);
+            connectionHandler.closeConn(conn,stmt);
+            return requirements;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * get req where user with userId is the creator
+     * @param userId
+     * @return list of req
+     */
+    public List<Requirement> getReqAsCreatorFinished(Long userId){
+        Connection conn = connectionHandler.getConn();
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + "WHERE stage=2 AND creator_id="+userId+";");
+            ResultSet rs = stmt.executeQuery();
+            List<Requirement> requirements = requirementLoader.loadList(rs);;
+            connectionHandler.closeConn(conn,stmt);
+            return requirements;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
@@ -169,7 +258,9 @@ public class RequirementDAO {
         try {
             PreparedStatement stmt = conn.prepareStatement("SELECT "+COLUMN_FULL+"FROM" + TABLE + s +userId+";");
             ResultSet rs = stmt.executeQuery();
-            return requirementLoader.loadList(rs);
+            List<Requirement> requirements = requirementLoader.loadList(rs);
+            connectionHandler.closeConn(conn,stmt);
+            return requirements;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
